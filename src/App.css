@@ -1,0 +1,232 @@
+/* ==========================================
+   PROFESSIONAL DARK UI – EMPLOYEE SYSTEM
+   FINAL • CLEAN • NO CONFLICTS
+========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ---------- COLOR SYSTEM ---------- */
+:root {
+  --primary: #38bdf8;
+  --secondary: #8b5cf6;
+  --success: #22c55e;
+
+  --bg-main: #0b0f1a;
+  --bg-card: #141a2e;
+  --bg-dialog: #020617;
+
+  --border: rgba(255,255,255,0.08);
+
+  --text-main: #ffffff;
+  --text-muted: #cbd5f5;        /* improved label visibility */
+  --text-placeholder: #94a3b8;
+  --text-helper: #93c5fd;       /* helper text color */
+}
+
+/* ---------- BODY ---------- */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background:
+    radial-gradient(circle at 15% 80%, #8b5cf633 0%, transparent 55%),
+    radial-gradient(circle at 85% 20%, #38bdf833 0%, transparent 55%),
+    var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+/* ---------- PAPER / CARDS ---------- */
+.MuiPaper-root,
+.MuiCard-root {
+  background: linear-gradient(145deg, var(--bg-card), rgba(255,255,255,0.02)) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 18px !important;
+  color: #ffffff !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.45) !important;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+.MuiTypography-root {
+  color: #ffffff !important;
+}
+
+.MuiTypography-h3 {
+  font-weight: 800 !important;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- TABLE ---------- */
+.MuiTableContainer-root {
+  border-radius: 16px !important;
+  border: 1px solid var(--border) !important;
+}
+
+.MuiTableCell-root,
+.MuiTableCell-head {
+  color: #ffffff !important;
+}
+
+.MuiTableCell-head {
+  background: linear-gradient(90deg, #38bdf822, #8b5cf622) !important;
+  font-weight: 700 !important;
+  border-bottom: 2px solid var(--primary) !important;
+}
+
+.MuiTableRow-root:hover {
+  background: rgba(56,189,248,0.08) !important;
+}
+
+/* ==========================================
+   DIALOG – DARK & CLEAN
+========================================== */
+
+.MuiDialog-paper {
+  background: linear-gradient(145deg, #020617, #0f172a) !important;
+  color: #ffffff !important;
+  border-radius: 22px !important;
+  padding: 26px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 35px 90px rgba(0,0,0,0.7) !important;
+}
+
+.MuiDialogContent-root {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.MuiDialogActions-root {
+  padding-top: 18px;
+  justify-content: flex-start;
+}
+
+/* ==========================================
+   INPUTS – FIXED LABEL + NO OVERLAP
+========================================== */
+
+.MuiFormControl-root {
+  margin-top: 6px !important;
+}
+
+/* Input container */
+.MuiOutlinedInput-root {
+  background: #020617 !important;
+  border-radius: 14px !important;
+  color: #ffffff !important;
+}
+
+/* Input text */
+.MuiOutlinedInput-input {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 500;
+  padding: 16px 16px !important;
+}
+
+/* Placeholder */
+.MuiOutlinedInput-input::placeholder {
+  color: var(--text-placeholder) !important;
+  opacity: 1;
+}
+
+/* LABEL – proper floating behavior */
+.MuiInputLabel-root {
+  color: var(--text-muted) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  transform: translate(14px, 16px) scale(1) !important;
+}
+
+/* When label shrinks (focus or value) */
+.MuiInputLabel-root.MuiInputLabel-shrink {
+  transform: translate(14px, -8px) scale(0.85) !important;
+}
+
+/* Label focused */
+.MuiInputLabel-root.Mui-focused {
+  color: var(--primary) !important;
+}
+
+/* Border */
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--border) !important;
+}
+
+/* Hover */
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary) !important;
+}
+
+/* Focus */
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.25);
+}
+
+/* Chrome autofill fix */
+input:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Helper text (Change for scanner testing) */
+.MuiFormHelperText-root {
+  color: var(--text-helper) !important;
+  font-size: 0.8rem !important;
+  margin-left: 6px !important;
+  margin-top: 6px !important;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.MuiButton-root {
+  color: #ffffff !important;
+}
+
+.MuiButton-containedPrimary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(56,189,248,0.4) !important;
+}
+
+.MuiButton-containedPrimary:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------- CHIP ---------- */
+.MuiChip-root {
+  color: #ffffff !important;
+}
+
+.MuiChip-colorSuccess {
+  background: rgba(34,197,94,0.2) !important;
+  color: #22c55e !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--secondary));
+  border-radius: 6px;
+}
